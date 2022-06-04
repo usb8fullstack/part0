@@ -1,0 +1,14 @@
+title Ex6_NewNote
+
+note over browser:
+After user click button 'Save':
+- Solving window.onload event --> redrawNotes()
+- Send post request, payload is JSON stringify
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over server:
+Solving the request.
+If not error, return the response
+end note
+server->browser: Respond HTTP status code 201

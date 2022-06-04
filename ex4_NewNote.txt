@@ -1,0 +1,21 @@
+https://www.websequencediagrams.com/
+
+title Ex4_NewNote
+
+note over browser:
+After user click button 'Save':
+- Send post request, payload is traditional formdata
+end note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over server:
+Solving the request.
+If not error, return the response
+end note
+server->browser: Respond HTTP status code 302 - redirect('/notes')
+
+note over browser:
+redirect URL ('/notes')
+/reload the Notes page
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
